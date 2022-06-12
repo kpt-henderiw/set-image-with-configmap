@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: a
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      control-plane: a
+  template:
+    metadata:
+      labels:
+        control-plane: a
+    spec:
+      containers:
+      - name: a
+        image: bla/a:latest
+        imagePullPolicy: Always

@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: transform-a
+data:
+  name: bla/a
+  newName: newblabla/a
+  newTag: latest
